@@ -1,0 +1,1 @@
+# minegta.shop
