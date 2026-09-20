@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MINE PRESETS 🔱 — Imperial Emerald & Gold 4K Editing Store</title>
+<meta name="description" content="Ultra-premium 4K CC presets, transitions, and cinematic editing packs by MINE PRESETS. Emerald & Gold edition.">
+<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-face-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-face-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- Ambient background canvas for ultra-smooth Green Snow & Rain physics -->
+<canvas id="weatherCanvas" aria-hidden="true"></canvas>
+
+<!-- Atmospheric Aurora Orbs -->
+<div class="aurora-orb aurora-orb-1"></div>
+<div class="aurora-orb aurora-orb-2"></div>
+<div class="aurora-orb aurora-orb-3"></div>
+
+<!-- Dual-element Emerald & Gold Magnetic Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navigation Header -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="#home" aria-label="MINE PRESETS Homepage">
+      <img class="logo-icon-img" src="images/website-icon.png" alt="MINE PRESETS Icon" width="34" height="34">
+      MINE<span>PRESETS</span> <span class="logo-trident">🔱</span>
+    </a>
+    <div class="links">
+      <a href="#store">Store</a>
+      <a href="#why">Why Us</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="sound-toggle" id="soundToggle" title="Toggle audio effects" aria-label="Toggle Audio">
+        <span class="sound-icon-container">
+          <svg class="sound-svg sound-svg-active" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="rgba(0, 245, 155, 0.25)"></polygon>
+            <path class="sound-wave wave-inner" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path class="sound-wave wave-outer" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+          <svg class="sound-svg sound-svg-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <line x1="22" y1="9" x2="16" y2="15"></line>
+            <line x1="16" y1="9" x2="22" y2="15"></line>
+          </svg>
+        </span>
+      </button>
+      <div id="authNavArea" class="auth-nav-area">
+        <button class="btn-auth-nav" id="openAuthBtn" type="button">
+          <span class="auth-icon-wrap">
+            <svg class="auth-key-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="7.5" cy="15.5" r="4.5" fill="rgba(0, 245, 155, 0.2)"></circle>
+              <path d="m21 2-9.6 9.6"></path>
+              <path d="m15.5 7.5 3 3"></path>
+              <path d="m18.5 4.5 2 2"></path>
+            </svg>
+          </span>
+          <span class="btn-auth-text">Sign In</span>
+        </button>
+      </div>
+      <a class="nav-cta" href="#store">Explore Packs ↗</a>
+      <button class="menu" id="menu" aria-label="Toggle Navigation Menu">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero" id="home">
+  <video class="hero-video" autoplay loop muted playsinline>
+    <source src="cc_preset_1.mp4" type="video/mp4">
+  </video>
+  <div class="grid-bg"></div>
+  <div class="hero-content">
+    <img class="hero-brand" src="images/website-icon.png" alt="MINE PRESETS Mascot" width="220" height="220" onerror="this.onerror=null; this.src='images/mine_brand_logo.png';">
+    <div class="lux-divider"></div>
+    <div class="badge"><span class="dot"></span> Emerald & Imperial Gold 4K Edition</div>
+    <h1>MAKE EVERY<br><span class="gradient">FRAME HIT.</span></h1>
+    <p>Premium 4K CC presets, beat-synced transitions, and master editing packs built to elevate your video grading to cinematic perfection.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#store">Explore Store ↗</a>
+      <a class="btn btn-ghost" href="#why">Why Creators Choose Us</a>
+    </div>
+    <div class="stats">
+      <div><b>5+</b>4K CC Presets</div>
+      <div><b>4K+</b>Active Creators</div>
+      <div><b>100%</b>Instant Digital Delivery</div>
+      <div><b>UPI</b>Instant Checkout</div>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- Store Section -->
+<section class="section reveal" id="store">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">The Imperial Collection</div>
+      <h2>Engineered For Elite Editors.</h2>
+    </div>
+    <p>Select any premium pack below. Click any CC thumbnail to preview in full 4K zoom, or tap Buy Now for instant UPI checkout.</p>
+  </div>
+  
+  <div class="filters">
+    <button class="filter active" data-filter="all">All Packs</button>
+    <button class="filter" data-filter="cc">4K CC Presets</button>
+    <button class="filter" data-filter="transition">Transitions</button>
+    <button class="filter" data-filter="system">Master Systems</button>
+  </div>
+
+  <div class="products">
+    <!-- CC 1 -->
+    <article class="card product cc-card" data-cat="cc" data-index="0">
+      <div class="card-shine"></div>
+      <div class="thumb cc-thumb">
+        <span class="tag">4K CC</span>
+        <span class="zoom-hint">🔍 Click to Zoom</span>
+        <img src="images/Mine-cc1_.png" alt="CC 1 — 4K Cinematic Look" loading="lazy" decoding="async">
+      </div>
+      <div class="card-body">
+        <h3>CC 1</h3>
+        <p class="cc-cinematic">This 4K CC Will Be Found Nowhere Else. Razor-sharp contrast with cinematic skin tones.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>400</div>
+          <button class="buy" data-name="CC 1" data-price="400">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CC 2 -->
+    <article class="card product cc-card" data-cat="cc" data-index="1">
+      <div class="card-shine"></div>
+      <div class="thumb cc-thumb">
+        <span class="tag">4K CC</span>
+        <span class="zoom-hint">🔍 Click to Zoom</span>
+        <img src="images/Mine-cc2_.png" alt="CC 2 — Exclusive Grading" loading="lazy" decoding="async">
+      </div>
+      <div class="card-body">
+        <h3>CC 2</h3>
+        <p class="cc-cinematic">Exclusive 4K CC — Made Different. Rich golden highlights with moody cinematic depth.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>350</div>
+          <button class="buy" data-name="CC 2" data-price="350">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CC 3 -->
+    <article class="card product cc-card" data-cat="cc" data-index="2">
+      <div class="card-shine"></div>
+      <div class="thumb cc-thumb">
+        <span class="tag">4K CC</span>
+        <span class="zoom-hint">🔍 Click to Zoom</span>
+        <img src="images/Mine-cc3_.png" alt="CC 3 — Master 4K Look" loading="lazy" decoding="async">
+      </div>
+      <div class="card-body">
+        <h3>CC 3</h3>
+        <p class="cc-cinematic">Your Footage Deserves This 4K Look. High-dynamic-range emerald balance and filmic punch.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>500</div>
+          <button class="buy" data-name="CC 3" data-price="500">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CC 4 -->
+    <article class="card product cc-card" data-cat="cc" data-index="3">
+      <div class="card-shine"></div>
+      <div class="thumb cc-thumb">
+        <span class="tag">4K CC</span>
+        <span class="zoom-hint">🔍 Click to Zoom</span>
+        <img src="images/Mine-cc4_.png" alt="CC 4 — Infinite Vibes" loading="lazy" decoding="async">
+      </div>
+      <div class="card-body">
+        <h3>CC 4</h3>
+        <p class="cc-cinematic">One 4K CC. Infinite Cinematic Vibes. Designed for fast social and reel color grading.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>300</div>
+          <button class="buy" data-name="CC 4" data-price="300">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CC 5 -->
+    <article class="card product cc-card" data-cat="cc" data-index="4">
+      <div class="card-shine"></div>
+      <div class="thumb cc-thumb">
+        <span class="tag">4K CC</span>
+        <span class="zoom-hint">🔍 Click to Zoom</span>
+        <img src="images/Mine-cc5_.png" alt="CC 5 — Ultimate Masterpiece" loading="lazy" decoding="async">
+      </div>
+      <div class="card-body">
+        <h3>CC 5</h3>
+        <p class="cc-cinematic">Not Everywhere. Just Here. The definitive flagship 4K color grading preset.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>850</div>
+          <button class="buy" data-name="CC 5" data-price="850">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Upcoming Transition Pack 01 -->
+    <article class="card product" data-cat="transition">
+      <div class="card-shine"></div>
+      <div class="thumb">
+        <svg class="upcoming-art" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Upcoming transition system">
+          <defs>
+            <linearGradient id="bgG1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#020704"/>
+              <stop offset="0.5" stop-color="#071b10"/>
+              <stop offset="1" stop-color="#020704"/>
+            </linearGradient>
+            <linearGradient id="emeraldGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#00f59b"/>
+              <stop offset="50%" stop-color="#f7e7b2"/>
+              <stop offset="100%" stop-color="#10b981"/>
+            </linearGradient>
+            <filter id="glowG1"><feGaussianBlur stdDeviation="15"/></filter>
+          </defs>
+          <rect width="900" height="520" fill="url(#bgG1)"/>
+          <circle cx="700" cy="120" r="140" fill="#00f59b" opacity="0.16" filter="url(#glowG1)"/>
+          <circle cx="180" cy="400" r="130" fill="#f7e7b2" opacity="0.12" filter="url(#glowG1)"/>
+          <g opacity="0.15" stroke="#00f59b">
+            <path d="M0 90H900M0 180H900M0 270H900M0 360H900M0 450H900"/>
+            <path d="M90 0V520M180 0V520M270 0V520M360 0V520M450 0V520M540 0V520M630 0V520M720 0V520M810 0V520"/>
+          </g>
+          <g transform="translate(450 255)">
+            <rect x="-280" y="-90" width="560" height="180" rx="22" fill="#041209" stroke="url(#emeraldGold)" stroke-width="2"/>
+            <text x="0" y="-14" text-anchor="middle" fill="#f7e7b2" font-family="Cinzel, serif" font-size="56" font-weight="800" letter-spacing="8">TRANSITIONS</text>
+            <text x="0" y="32" text-anchor="middle" fill="#00f59b" font-family="Inter, sans-serif" font-size="16" letter-spacing="5">PACK 01 — LOADING DROP</text>
+            <line x1="-140" y1="56" x2="140" y2="56" stroke="url(#emeraldGold)" stroke-width="2"/>
+          </g>
+        </svg>
+        <span class="tag">Transitions</span>
+      </div>
+      <div class="card-body">
+        <h3>Transition Pack 01</h3>
+        <p>Ultra-fast seamless zooms, whip moves, and camera impacts for gaming & reels.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>249</div>
+          <button class="buy" data-name="Transition Pack 01" data-price="249">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Upcoming System Preset 01 -->
+    <article class="card product" data-cat="system">
+      <div class="card-shine"></div>
+      <div class="thumb">
+        <svg class="upcoming-art" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Upcoming system preset">
+          <defs>
+            <linearGradient id="bgS1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#020704"/>
+              <stop offset="0.5" stop-color="#0a2214"/>
+              <stop offset="1" stop-color="#020704"/>
+            </linearGradient>
+            <linearGradient id="goldGreen" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#f7e7b2"/>
+              <stop offset="50%" stop-color="#00f59b"/>
+              <stop offset="100%" stop-color="#ffd700"/>
+            </linearGradient>
+          </defs>
+          <rect width="900" height="520" fill="url(#bgS1)"/>
+          <g transform="translate(450 255)">
+            <rect x="-280" y="-90" width="560" height="180" rx="22" fill="#030d07" stroke="url(#goldGreen)" stroke-width="2"/>
+            <text x="0" y="-14" text-anchor="middle" fill="#00f59b" font-family="Cinzel, serif" font-size="56" font-weight="800" letter-spacing="8">SYSTEM 01</text>
+            <text x="0" y="32" text-anchor="middle" fill="#f7e7b2" font-family="Inter, sans-serif" font-size="16" letter-spacing="5">FULL WORKFLOW ENGINE</text>
+            <line x1="-140" y1="56" x2="140" y2="56" stroke="url(#goldGreen)" stroke-width="2"/>
+          </g>
+        </svg>
+        <span class="tag">System</span>
+      </div>
+      <div class="card-body">
+        <h3>System Preset 01</h3>
+        <p>Complete creator workflow setup for consistent Hollywood-grade grading.</p>
+        <div class="price-row">
+          <div class="price"><span class="price-symbol">₹</span>299</div>
+          <button class="buy" data-name="System Preset 01" data-price="299">Buy now <span class="buy-arrow">↗</span></button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Why Us Section with 3D Gyroscope Motion Graphic -->
+<section class="section reveal" id="why">
+  <div class="feature">
+    <div class="feature-box">
+      <div class="eyebrow">The Creator Advantage</div>
+      <h3>Less Tweaking.<br>More Creating.</h3>
+      <p>Stop rebuilding the same look from scratch. MINE PRESETS gives you studio-grade assets engineered for maximum rendering speed and a prestigious finish.</p>
+      <div class="checks">
+        <div class="check"><span class="check-icon">✓</span> 4K Ultra-Sharp Grading with zero banding</div>
+        <div class="check"><span class="check-icon">✓</span> Drag-and-drop After Effects & Premiere compatibility</div>
+        <div class="check"><span class="check-icon">✓</span> Instant automated UPI QR payment & quick delivery</div>
+        <div class="check"><span class="check-icon">✓</span> Lifetime creator access with free revisions</div>
+      </div>
+    </div>
+    
+    <div class="feature-box preview">
+      <div class="gyro-container">
+        <div class="gyro-ring gyro-ring-1"></div>
+        <div class="gyro-ring gyro-ring-2"></div>
+        <div class="gyro-ring gyro-ring-3"></div>
+        <div class="gyro-core">🔱</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section reveal" id="about">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">About MINE PRESETS</div>
+      <h2>Crafted With An Editor Mindset.</h2>
+    </div>
+    <p>MINE PRESETS was founded by video creators who demand excellence. Every color grade curve, transition curve, and light leak is handcrafted for maximum visual impact on modern screens.</p>
+  </div>
+</section>
+
+<!-- Contact & Socials -->
+<section class="section reveal" id="contact">
+  <div class="feature-box">
+    <div class="eyebrow">Direct Contact & Community</div>
+    <h3>Need Help Or Custom Presets?</h3>
+    <p>Reach out directly for bundle inquiries, creator sponsorships, or instant editing support.</p>
+    <p style="margin-top:14px; font-weight:700;">Official Support: <a href="mailto:minegta611@gmail.com" style="color:var(--emerald-neon); text-decoration:underline;">minegta611@gmail.com</a></p>
+    
+    <div class="socials-grid">
+      <!-- Instagram -->
+      <a class="social-btn social-instagram" href="https://www.instagram.com/minegta_?stkn=MTVidTk5bm9mb25pbg==" target="_blank" rel="noopener noreferrer" aria-label="Official Instagram">
+        <div class="social-icon-wrapper">
+          <img class="social-brand-img" src="images/icon-instagram.png" alt="Instagram Logo" width="32" height="32" loading="lazy">
+        </div>
+        <div class="social-info">
+          <span class="social-name">Instagram</span>
+          <span class="social-tag">@minegta_</span>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- YouTube -->
+      <a class="social-btn social-youtube" href="https://www.youtube.com/@MINEGTA_OFFICIAL_1" target="_blank" rel="noopener noreferrer" aria-label="Official YouTube Channel">
+        <div class="social-icon-wrapper">
+          <img class="social-brand-img" src="images/icon-youtube.png" alt="YouTube Logo" width="32" height="32" loading="lazy">
+        </div>
+        <div class="social-info">
+          <span class="social-name">YouTube</span>
+          <span class="social-tag">@MINEGTA_OFFICIAL_1</span>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+
+      <!-- Discord -->
+      <a class="social-btn social-discord" href="https://discord.gg/aunjV6zMj" target="_blank" rel="noopener noreferrer" aria-label="Official Discord Community">
+        <div class="social-icon-wrapper">
+          <img class="social-brand-img" src="images/icon-discord.png" alt="Discord Logo" width="32" height="32" loading="lazy">
+        </div>
+        <div class="social-info">
+          <span class="social-name">Discord Server</span>
+          <span class="social-tag">VIP Community</span>
+        </div>
+        <span class="social-arrow">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-in">
+    <span>© 2026 MINE PRESETS 🔱 — Imperial Emerald & Gold Edition.</span>
+    <span>Designed for Elite Video Editors. All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- ==========================================================================
+   ENHANCED CC ZOOM LIGHTBOX (NEXT / PREV / KEYBOARD / ZOOM)
+   ========================================================================== -->
+<div class="cc-lightbox" id="ccLightbox" aria-hidden="true" role="dialog" aria-label="CC Image Preview Lightbox">
+  <div class="cc-lightbox-frame">
+    <button class="cc-lightbox-close" id="ccLightboxClose" aria-label="Close Preview">×</button>
+    <button class="cc-lightbox-nav prev" id="ccLightboxPrev" aria-label="Previous Preview">‹</button>
+    <button class="cc-lightbox-nav next" id="ccLightboxNext" aria-label="Next Preview">›</button>
+    
+    <img id="ccLightboxImage" src="" alt="4K CC Preview">
+    <div class="cc-lightbox-label" id="ccLightboxLabel">CC 1 OF 5 — CLICK TO ZOOM — ESC TO CLOSE</div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+   LUXURY UPI CHECKOUT MODAL
+   ========================================================================== */ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Secure UPI Checkout">
+  <div class="modal-box">
+    <button class="modal-close" id="close" aria-label="Close Checkout Modal">×</button>
+    <div class="eyebrow">Verified UPI Gateway</div>
+    <h3>Complete Your Order</h3>
+    <p class="modal-sub">Scan the QR code with GPay, PhonePe, Paytm, or BHIM.</p>
+    
+    <div class="product-name" id="productName">Product Name — ₹0</div>
+    
+    <div class="qr-wrap">
+      <div class="qr-luxury-frame">
+        <span class="qr-corner tl"></span>
+        <span class="qr-corner tr"></span>
+        <span class="qr-corner bl"></span>
+        <span class="qr-corner br"></span>
+        <canvas id="paymentQR" width="360" height="360" aria-label="Dynamic UPI QR Code"></canvas>
+      </div>
+    </div>
+    
+    <div class="upi-info">UPI ID: <b id="upiIdText">ankitgirirg@okicici</b></div>
+    <button class="copy-btn" id="copyBtn">📋 Copy UPI ID</button>
+    
+    <div class="payment-total">Pay Exactly <span id="payAmount">₹0</span></div>
+    
+    <div class="modal-actions">
+      <button class="btn-upi-app" id="upiPay">⚡ Open in UPI App</button>
+      <button class="btn-paid" id="paidBtn">I Have Paid ✓</button>
+    </div>
+    
+    <div id="downloadArea">
+      <div style="color:var(--emerald-neon); font-weight:800; margin-bottom:8px;">✓ Payment Recorded — File Ready</div>
+      <a id="downloadBtn" class="btn btn-primary" href="#" download style="padding:10px 20px; font-size:13px; display:inline-flex;">Download Preset Pack ↓</a>
+    </div>
+    
+    <div class="note">After payment, take a screenshot of your payment confirmation. If you need any assistance, contact minegta611@gmail.com</div>
+  </div>
+</div>
+
+<!-- ==========================================================================
+   LUXURY EMERALD & GOLD AUTHENTICATION MODAL (LOGIN & SIGN UP)
+   ========================================================================== -->
+<div class="modal auth-modal" id="authModal" role="dialog" aria-modal="true" aria-label="Creator Authentication">
+  <div class="modal-box auth-box">
+    <button class="modal-close" id="authClose" aria-label="Close Authentication Modal">×</button>
+    <div class="eyebrow" id="authEyebrow">Imperial Creator Access</div>
+    <h3 id="authTitle">Member Sign In</h3>
+    <p class="modal-sub" id="authSub">Sign in to unlock verified UPI checkout and secure preset downloads.</p>
+    
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tabLogin" type="button">Sign In</button>
+      <button class="auth-tab" id="tabRegister" type="button">Create Account</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <form id="loginForm" class="auth-form" onsubmit="return false;">
+      <div class="auth-field">
+        <label for="loginUsername">Username or Email</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4" fill="rgba(0, 245, 155, 0.18)"></circle>
+            </svg>
+          </span>
+          <input type="text" id="loginUsername" placeholder="Enter username or email" required autocomplete="username">
+        </div>
+      </div>
+      <div class="auth-field">
+        <label for="loginPassword">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="rgba(0, 245, 155, 0.15)"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </span>
+          <input type="password" id="loginPassword" placeholder="Enter your password" required autocomplete="current-password">
+          <button type="button" class="pwd-toggle" id="toggleLoginPwd" aria-label="Toggle password visibility">
+            <svg class="eye-svg eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3" fill="rgba(0, 245, 155, 0.3)"></circle>
+            </svg>
+            <svg class="eye-svg eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="auth-row">
+        <label class="remember-label">
+          <input type="checkbox" id="loginRemember" checked>
+          <span>Remember session</span>
+        </label>
+        <span class="admin-hint">Admin: <code>admin</code> / <code>Mine@2026</code></span>
+      </div>
+      <div class="auth-lock-msg" id="lockMsg"></div>
+      <button type="submit" class="btn-auth-submit" id="loginSubmit">Sign In to Account →</button>
+      <div class="auth-switch-wrap">
+        Don't have an account? <button type="button" class="auth-switch-link" id="switchToRegister">Create one now</button>
+      </div>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form id="registerForm" class="auth-form" style="display:none;" onsubmit="return false;">
+      <div class="auth-field">
+        <label for="regUsername">Choose Username</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4" fill="rgba(0, 245, 155, 0.18)"></circle>
+            </svg>
+          </span>
+          <input type="text" id="regUsername" placeholder="e.g. elite_editor" required autocomplete="username">
+        </div>
+      </div>
+      <div class="auth-field">
+        <label for="regEmail">Email Address</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </span>
+          <input type="email" id="regEmail" placeholder="yourname@gmail.com" required autocomplete="email">
+        </div>
+      </div>
+      <div class="auth-field">
+        <label for="regPassword">Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="rgba(0, 245, 155, 0.15)"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+          </span>
+          <input type="password" id="regPassword" placeholder="Minimum 6 characters" required autocomplete="new-password">
+          <button type="button" class="pwd-toggle" id="toggleRegPwd" aria-label="Toggle password visibility">
+            <svg class="eye-svg eye-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3" fill="rgba(0, 245, 155, 0.3)"></circle>
+            </svg>
+            <svg class="eye-svg eye-closed" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+              <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+              <line x1="1" y1="1" x2="23" y2="23"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="auth-field">
+        <label for="regConfirmPassword">Confirm Password</label>
+        <div class="input-wrap">
+          <span class="input-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="rgba(0, 245, 155, 0.18)"></path>
+            </svg>
+          </span>
+          <input type="password" id="regConfirmPassword" placeholder="Re-enter password" required autocomplete="new-password">
+        </div>
+      </div>
+      <button type="submit" class="btn-auth-submit" id="registerSubmit">Create Creator Account →</button>
+      <div class="auth-switch-wrap">
+        Already have an account? <button type="button" class="auth-switch-link" id="switchToLogin">Sign In</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Floating Toast Container -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ==========================================================================
+   JAVASCRIPT ENGINE (WEATHER PARTICLES, 3D TILT, MAGNETIC CURSOR, AUDIO)
+   ========================================================================== -->
+<script src="script.js"></script>
+</body>
+</html>
